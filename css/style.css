@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #444;
+    margin: 0px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size:13px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.btn-primary {
+    text-shadow: 1px 1px 0 #333;
+}
+#container{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+}
+#container canvas{
+    width: 100%;
+    height: 100%;
+    cursor: move;
+}
+#snippet{
+    opacity: 0;
+    pointer-events: none;
+}
+#editorContainer{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    right: 0;
+    bottom: 40px;
+    z-index: 100;
+    pointer-events: none;
+}
+#editorContainer textarea{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: monospace;
+    padding: 10px;
+    pointer-events: auto;
+    outline: none;
+    resize: none;
+    border: 0;
+    box-shadow: inset rgba(0,0,0,.5) 0 0 10px;
+    background-color: rgba( 255, 255, 255, .5 );
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+}
+.navbar *, .container *{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+#snapshotBtn, #toggleBtn, #switchMode{ 
+    margin-top: 10px;
+}
+#snapshotBtn.downloading {
+    cursor: wait;
+}
+#editorContainer textarea.hide-textarea{
+    pointer-events: none;
+    opacity: 0;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #f5f5f5;
+}
+#footer .container{
+    line-height: 40px;
+    white-space: nowrap;
+}
+#footer b{
+    font-weight: bold;
+    color: #222;
+}
